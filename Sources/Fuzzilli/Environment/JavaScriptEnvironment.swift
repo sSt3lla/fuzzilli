@@ -371,7 +371,7 @@ public class JavaScriptEnvironment: ComponentBase, Environment {
         registerBuiltin("Boolean", ofType: .jsBooleanConstructor)
         registerBuiltin("Number", ofType: .jsNumberConstructor)
         registerBuiltin("Symbol", ofType: .jsSymbolConstructor)
-        registerBuiltin("BigInt", ofType: .jsBigIntConstructor)
+        //registerBuiltin("BigInt", ofType: .jsBigIntConstructor)
         registerBuiltin("RegExp", ofType: .jsRegExpConstructor)
         for variant in ["Error", "EvalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "AggregateError", "URIError"] {
             registerBuiltin(variant, ofType: .jsErrorConstructor(variant))

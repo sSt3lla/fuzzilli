@@ -19,7 +19,8 @@ let qjsProfile = Profile(
         ["--reprl"]
     },
 
-    processEnv: ["UBSAN_OPTIONS": "handle_segv=0"],
+    processEnv: ["UBSAN_OPTIONS": "handle_segv=0",
+                 "ASAN_OPTIONS": "abort_on_error=1"],
 
     maxExecsBeforeRespawn: 1000,
 
@@ -52,7 +53,7 @@ let qjsProfile = Profile(
     disabledMutators: [],
 
     additionalBuiltins: [
-        "placeholder"         : .function([] => .undefined)
+        "gc"         : .function([] => .undefined)
     ],
 
     additionalObjectGroups: [],
